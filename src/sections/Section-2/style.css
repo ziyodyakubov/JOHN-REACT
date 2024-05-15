@@ -1,0 +1,78 @@
+#section-2 {
+    background: #EDF7FA;
+    padding-top: 27px;
+    padding-bottom: 32px;
+}
+
+.section2_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card {
+    margin-top: 22px;
+    padding-top: 24px;
+    padding-left: 21px;
+    padding-right: 23px;
+    padding-bottom: 24px;
+    background-color: #fff;
+    border-radius: 4px;
+    background: #FFF;
+    box-shadow: 0px 4px 10px 0px rgba(187, 225, 250, 0.25);
+    width: 418px;
+    height: 295px;
+    flex-shrink: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+}
+
+h2 {
+    color: var(--Dark-Color, #21243D);
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 10px;
+}
+
+p {
+    width: 368px;
+    color: var(--Dark-Color, #21243D);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.date-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.date-wrapper h3 {
+    color: var(--Dark-Color, #21243D);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.date-wrapper h3:nth-child(1) {
+    padding-right: 20px;
+    border-right: 1px solid #21243D;
+}
+
+.date-wrapper h3:nth-child(2) {
+    padding-left: 20px;
+}
+
+.recent {
+    color: var(--Dark-Color, #21243D);
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+}

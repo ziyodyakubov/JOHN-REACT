@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Heebo";
+}
+
+.container{
+    max-width: 944px !important;
+    margin: 0 auto !important; 
+}
+
+.container-2{
+    max-width: 858px !important;
+    margin: 0 auto; 
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style-type: none;
+}
