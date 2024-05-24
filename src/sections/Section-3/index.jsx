@@ -1,10 +1,17 @@
 import "./style.css"
+import React from "react"
 import image1 from "./../../assets/image-1.png"
 import image2 from "./../../assets/image-2.png"
 import image3 from "./../../assets/image-3.png"
 
+function Section_3() {
 
-function Section_3(){
+    const cards = [
+        { image: image1, title: "Designing Dashboards", year: 2020, fix: "Dashboard", desc: "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet." },
+        { image: image2, title: "Vibrant Portraits of 2020", year: 2018, fix: "Illustration", desc: "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet." },
+        { image: image3, title: "36 Days of Malayalam type", year: 2018, fix: "Typography", desc: "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet." },
+    ];
+
     return (
         <>
             <section id="section-3">
@@ -12,55 +19,26 @@ function Section_3(){
                     <small>Featured works</small>
 
                     <div className="card-wrapper">
-                        <div className="card-2">
-                            <img src={image1} alt="" />
-
-                            <div className="text-wrapper-2">
-                                <h3>Designing Dashboards</h3>
-
-                                <div className="date-wrap">
-                                    <div className="num"><h4>2023</h4></div>
-                                    <h5>Dashboard</h5>
+                        {cards.map((card, index) => (
+                            <div className="card-2" key={index}>
+                                <img src={card.image} alt={card.title} />
+                                <div className="text-wrapper-2">
+                                    <h3>{card.title}</h3>
+                                    <div className="date-wrap">
+                                        <div className="num">
+                                            <h4>{card.year}</h4>
+                                        </div>
+                                        <h5>{card.fix}</h5>
+                                    </div>
+                                    <p>{card.desc}</p>
                                 </div>
-
-                                <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
                             </div>
-                        </div>
-
-                        <div className="card-2">
-                            <img src={image2} alt="image2" />
-
-                            <div className="text-wrapper-2">
-                                <h3>Vibrant Portraits of 2020</h3>
-
-                                <div className="date-wrap">
-                                    <div className="num"><h4>2018</h4></div>
-                                    <h5>DIllustration</h5>
-                                </div>
-
-                                <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
-                            </div>
-                        </div>
-
-                        <div className="card-2">
-                            <img src={image3} alt="image 3" />
-
-                            <div className="text-wrapper-2">
-                                <h3>36 Days of Malayalam type</h3>
-
-                                <div className="date-wrap">
-                                    <div className="num"><h4>2018</h4></div>
-                                    <h5>Typography</h5>
-                                </div>
-
-                                <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
-                            </div>
-                        </div>
+                        ))}
                     </div>
                 </div>
             </section>
         </>
-    )
+    );
 }
 
-export default Section_3
+export default Section_3;
